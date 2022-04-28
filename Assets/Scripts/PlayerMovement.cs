@@ -15,13 +15,13 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         Player = this;
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
         InputManager.I.OnTouchBegan += OnStartTouch;
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
     }
 
     private void OnStartTouch(Touch touch)
@@ -39,4 +39,6 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetFloat("Speed", agent.velocity.magnitude);
     }
+
+    public void Interact() => anim.SetTrigger("Grab");
 }

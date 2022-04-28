@@ -26,6 +26,13 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Touch touch = new Touch();
+            touch.fingerId = 0;
+            touch.position = Input.mousePosition;
+            OnTouchBegan?.Invoke(touch);
+        }
         if (Input.touchCount > 0)
         {
             foreach (Touch touch in Input.touches)

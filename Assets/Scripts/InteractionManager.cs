@@ -18,9 +18,12 @@ public class InteractionManager : MonoBehaviour
 
         if (InputManager.I.CastFromCamera(touch.position, out RaycastHit hit, interactableMask))
         {
-            if (F.FastDistance (PlayerMovement.Player.transform.position, hit.transform.position) < interactDistance * interactDistance &&
+            if (F.FastDistance(PlayerMovement.Player.transform.position, hit.transform.position) < interactDistance * interactDistance &&
                 hit.transform.TryGetComponent(out IInteractable interactable))
-                    interactable.Interact();
+            {
+                interactable.Interact();
+                PlayerMovement.Player.Interact();
+            }
         }
     }
 }
