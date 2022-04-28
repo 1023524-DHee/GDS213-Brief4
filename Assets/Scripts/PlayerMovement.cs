@@ -6,11 +6,13 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
+    private Animator anim;
 
     private void Start()
     {
         InputManager.I.OnTouchBegan += OnStartTouch;
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnStartTouch(Touch touch)
@@ -22,5 +24,10 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawRay(hit.point, hit.normal, Color.white, 2);
             agent.SetDestination(hit.point);
         }
+    }
+
+    private void Update()
+    {
+        anim.SetFloat("Speed", agent.velocity.magnitude);
     }
 }
