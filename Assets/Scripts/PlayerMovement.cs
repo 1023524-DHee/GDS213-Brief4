@@ -5,8 +5,17 @@ using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Player;
+
+    public LayerMask tapMask;
+
     private NavMeshAgent agent;
     private Animator anim;
+
+    private void Awake()
+    {
+        Player = this;
+    }
 
     private void Start()
     {
@@ -19,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (touch.fingerId != 0) return;
 
-        if (InputManager.I.CastFromCamera(touch.position, out RaycastHit hit))
+        if (InputManager.I.CastFromCamera(touch.position, out RaycastHit hit, tapMask) && !hit.transform.TryGetComponent (out IInteractable interactable))
         {
             Debug.DrawRay(hit.point, hit.normal, Color.white, 2);
             agent.SetDestination(hit.point);

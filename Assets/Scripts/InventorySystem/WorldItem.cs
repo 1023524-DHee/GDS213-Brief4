@@ -6,7 +6,7 @@ using UnityEngine;
 public class WorldItem : MonoBehaviour, IInteractable
 {
     public Item_SO itemSO;
-    
+
     public void Interact()
     {
         InventorySystem_Static.AddItem(itemSO, out bool successfulAdd);
@@ -17,7 +17,7 @@ public class WorldItem : MonoBehaviour, IInteractable
     private void ItemAdded()
     {
         Debug.Log("Item picked up");
-        Destroy(itemSO);
+        Destroy(gameObject);
     }
 
     private void ItemNotAdded()

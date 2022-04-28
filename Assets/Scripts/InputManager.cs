@@ -5,17 +5,14 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager I;
 
-    [SerializeField] private LayerMask _cameraRaycastMask;
-    public static LayerMask CameraRaycastMask;
-
     public delegate void TouchBeganEvent(Touch touch);
     public event TouchBeganEvent OnTouchBegan;
 
     public delegate void TouchEndedEvent(Touch touch);
     public event TouchEndedEvent OnTouchEnded;
 
-    public bool CastFromCamera(Vector2 screenPosition, out RaycastHit hit) =>
-        Physics.Raycast(Camera.current.ScreenPointToRay (screenPosition), out hit, 150, CameraRaycastMask);
+    public bool CastFromCamera(Vector2 screenPosition, out RaycastHit hit, int layerMask = ~0) =>
+        Physics.Raycast(Camera.current.ScreenPointToRay (screenPosition), out hit, 150, layerMask);
 
     private void Awake()
     {
@@ -23,7 +20,6 @@ public class InputManager : MonoBehaviour
         {
             I = this;
             DontDestroyOnLoad(gameObject);
-            CameraRaycastMask = _cameraRaycastMask;
         }
         else Destroy(gameObject);
     }
