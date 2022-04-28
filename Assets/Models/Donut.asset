@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3fdc5925b78714c906b187d224c089, type: 3}
   m_Name: Donut
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  itemModel: {fileID: 0}
+  itemName: Donut
+  itemDescription: An old, forgotten donut
+  itemModel: {fileID: 919132149155446097, guid: 0df49a0c83caae9418d068ab6044192e, type: 3}
   itemComponents: []
   recycleInstructions: {fileID: 0}

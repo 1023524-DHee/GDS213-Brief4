@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e3fdc5925b78714c906b187d224c089, type: 3}
-  m_Name: SodaCan
+  m_Name: StyroCup
   m_EditorClassIdentifier: 
-  itemName: Soda Can
-  itemDescription: An aluminium can that used to hold soda
-  itemModel: {fileID: 919132149155446097, guid: 5668b0b4767f7834fa3a4860df7409fd, type: 3}
+  itemName: Styrofoam Cup
+  itemDescription: A small cup made of styrofoam
+  itemModel: {fileID: 919132149155446097, guid: 0636be03d755c81428a8ddd6fd9b3382, type: 3}
   itemComponents: []
   recycleInstructions: {fileID: 0}

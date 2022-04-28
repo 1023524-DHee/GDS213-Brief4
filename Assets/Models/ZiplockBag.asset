@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3fdc5925b78714c906b187d224c089, type: 3}
   m_Name: ZiplockBag
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  itemModel: {fileID: 0}
+  itemName: Ziplock Bag
+  itemDescription: A ziplock bag made of soft plastic
+  itemModel: {fileID: 919132149155446097, guid: adf58dcbb4618ed4497a46ec3c25436d, type: 3}
   itemComponents: []
   recycleInstructions: {fileID: 0}
