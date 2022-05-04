@@ -3,7 +3,17 @@ guid: 0df49a0c83caae9418d068ab6044192e
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Do-Nut
+    second: {fileID: 2100000, guid: 90324dc45fc9dac45aa1981e016d9de3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frosting.001
+    second: {fileID: 2100000, guid: 886f8095c9ae09a4badd462f7fea171b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

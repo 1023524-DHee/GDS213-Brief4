@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Soda Can
   itemDescription: An aluminium can that used to hold soda
-  itemModel: {fileID: 919132149155446097, guid: 5668b0b4767f7834fa3a4860df7409fd, type: 3}
+  itemModel: {fileID: 1041386716786555709, guid: 55dbb19fdddfbf64d8394277ce01f31b, type: 3}
   itemComponents: []
   recycleInstructions: {fileID: 0}

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Donut
   itemDescription: An old, forgotten donut
-  itemModel: {fileID: 919132149155446097, guid: 0df49a0c83caae9418d068ab6044192e, type: 3}
+  itemModel: {fileID: 5692258717084173435, guid: 5087e5561b54e4c4c8f2aefa3e6dae47, type: 3}
   itemComponents: []
   recycleInstructions: {fileID: 0}

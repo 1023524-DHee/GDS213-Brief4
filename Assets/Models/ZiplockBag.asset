@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Ziplock Bag
   itemDescription: A ziplock bag made of soft plastic
-  itemModel: {fileID: 919132149155446097, guid: adf58dcbb4618ed4497a46ec3c25436d, type: 3}
+  itemModel: {fileID: 3787754755094832888, guid: fcb947ce0d743df4491c73812eea1081, type: 3}
   itemComponents: []
   recycleInstructions: {fileID: 0}
