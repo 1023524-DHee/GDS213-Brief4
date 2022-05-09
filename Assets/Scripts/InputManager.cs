@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
     public event TouchEndedEvent OnTouchEnded;
 
     public bool CastFromCamera(Vector2 screenPosition, out RaycastHit hit, int layerMask = ~0) =>
-        Physics.Raycast(Camera.current.ScreenPointToRay (screenPosition), out hit, 150, layerMask);
+        Physics.Raycast(Camera.main.ScreenPointToRay (screenPosition), out hit, 150, layerMask);
 
     private void Awake()
     {
