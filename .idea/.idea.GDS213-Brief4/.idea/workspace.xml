@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="56f138db-4be2-4f8f-94c7-1186a0600509" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS213-Brief4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS213-Brief4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Amazing Assets/Curved World/Example Scenes/Files/Unity Tanks/Materials/Brown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Amazing Assets/Curved World/Example Scenes/Files/Unity Tanks/Materials/Brown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Cardboard_Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Cardboard_Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ParkScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ParkScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_UI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

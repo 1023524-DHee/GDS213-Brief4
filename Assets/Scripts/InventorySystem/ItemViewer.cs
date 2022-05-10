@@ -52,7 +52,10 @@ public class ItemViewer : MonoBehaviour, IDragHandler
         HideItem();
         _spawnedObject = Instantiate(item.itemModel, spawnPosition);
         _spawnedObject.layer = LayerMask.NameToLayer("Inspection");
-        _spawnedObject.GetComponent<MeshRenderer>().material.shader = standardMat;
+        foreach (Material material in _spawnedObject.GetComponent<MeshRenderer>().materials)
+        {
+            material.shader = standardMat;
+        }
         camera.enabled = true;
     }
 
