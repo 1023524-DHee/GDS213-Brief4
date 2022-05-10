@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Used when spawning an item in the world.
+ */
 [ExecuteAlways]
 [RequireComponent(typeof(BoxCollider))]
 public class WorldItem : MonoBehaviour, IInteractable
