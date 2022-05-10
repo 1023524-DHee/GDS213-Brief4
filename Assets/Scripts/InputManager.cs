@@ -1,5 +1,10 @@
 using UnityEngine;
 
+    // Invokes OnTouchBegan and OnTouchEnded events
+    // Subscribe to events using InputManager.I.OnTouchBegan += methodName
+    // Make sure this script is in the first loaded scene
+    // It will persist through any scene loaded after
+
 [DefaultExecutionOrder(-1)]
 public class InputManager : MonoBehaviour
 {
@@ -26,13 +31,6 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Touch touch = new Touch();
-            touch.fingerId = 0;
-            touch.position = Input.mousePosition;
-            OnTouchBegan?.Invoke(touch);
-        }
         if (Input.touchCount > 0)
         {
             foreach (Touch touch in Input.touches)
