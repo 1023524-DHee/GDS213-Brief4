@@ -14,7 +14,6 @@ public class PlayerInventory_UI : MonoBehaviour
 {
     private List<RectTransform> _slotPositions;
     private CanvasGroup _inventoryCanvasGroup;
-    private Camera _mainCamera;
 
     private bool _canClose;
     
@@ -28,8 +27,7 @@ public class PlayerInventory_UI : MonoBehaviour
     private void Awake()
     {
         _inventoryCanvasGroup = GetComponent<CanvasGroup>();
-        _mainCamera = Camera.main;
-        
+
         Initialise();
     }
     

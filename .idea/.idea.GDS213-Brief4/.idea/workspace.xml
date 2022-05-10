@@ -3,12 +3,44 @@
   <component name="ChangeListManager">
     <list default="true" id="56f138db-4be2-4f8f-94c7-1186a0600509" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDS213-Brief4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDS213-Brief4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySlot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySlot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem_Static.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem_Static.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Box.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Box.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Can.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Can.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Capsule.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Capsule.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Cylinder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Cylinder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Item.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Item.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/RecycleInstructions.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/RecycleInstructions.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Sphere.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Inventory/Sphere.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/EmptySlot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/EmptySlot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySlot.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySlot.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory_BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer_BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer_BG.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer_Quit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer_Quit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Item_SO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Item_SO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/New Render Texture.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/New Render Texture.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_SO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_SO.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_UI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/WorldItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/WorldItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/RecycleInstructions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/RecycleInstructions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/RecycleInstructions_SO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/RecycleInstructions_SO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +64,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemViewer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PlayerInventory_Button.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/RecycleInstructions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/RecycleInstructions_SO.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="27xUoihFb7d3ZSuZsaTd5QV7YQP" />
   <component name="ProjectViewState">
@@ -81,6 +111,7 @@
       <workItem from="1650261449307" duration="23967000" />
       <workItem from="1650876250424" duration="1319000" />
       <workItem from="1652173643983" duration="4281000" />
+      <workItem from="1652189334946" duration="1106000" />
     </task>
     <servers />
   </component>
@@ -100,6 +131,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
