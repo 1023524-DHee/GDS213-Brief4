@@ -12,6 +12,7 @@ public class ItemViewer : MonoBehaviour, IDragHandler
     public Transform spawnPosition;
     public Camera camera;
     public float minZoom, maxZoom;
+    public Shader standardMat;
     
     private GameObject _spawnedObject;
     private float _pinchDifference;
@@ -50,6 +51,8 @@ public class ItemViewer : MonoBehaviour, IDragHandler
     {
         HideItem();
         _spawnedObject = Instantiate(item.itemModel, spawnPosition);
+        _spawnedObject.layer = LayerMask.NameToLayer("Inspection");
+        _spawnedObject.GetComponent<MeshRenderer>().material.shader = standardMat;
         camera.enabled = true;
     }
 

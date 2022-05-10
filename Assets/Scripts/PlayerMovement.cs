@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,10 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private NavMeshAgent agent;
     private Animator anim;
 
-    private void Awake()
-    {
-        Player = this;
-        anim = GetComponentInChildren<Animator>();
+    private void Awake()
+    {
+        Player = this;
+        anim = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -35,10 +36,10 @@ public class PlayerMovement : MonoBehaviour
             agent.SetDestination(hit.point);
     }
 
-    private void Update()
-    {
-        // Update animator to move at the same speed as the navmesh agent
-        anim.SetFloat("Speed", agent.velocity.magnitude);
+    private void Update()
+    {
+        // Update animator to move at the same speed as the navmesh agent
+        anim.SetFloat("Speed", agent.velocity.magnitude);
     }
 
     public void Interact() => anim.SetTrigger("Grab");

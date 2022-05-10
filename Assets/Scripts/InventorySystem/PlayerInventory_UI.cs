@@ -2,19 +2,39 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerInventory_UI : MonoBehaviour
 {
     private List<RectTransform> _slotPositions;
+    private CanvasGroup _inventoryCanvasGroup;
+    private Camera _mainCamera;
+
+    private bool _canClose;
     
     public Transform inventorySlotParent;
     public GameObject inventoryButton;
+    public RectTransform panelRectTransform;
     public CanvasGroup itemViewer;
+
+    public Item_SO testSO;
     
     private void Awake()
     {
         Initialise();
+        _inventoryCanvasGroup = GetComponent<CanvasGroup>();
+        _mainCamera = Camera.main;
+    }
+
+    private void Update()
+    {
+        if (!(_canClose)) return;
+        
+        if (Input.GetMouseButtonDown(0) && !RectTransformUtility.RectangleContainsScreenPoint(panelRectTransform, Input.mousePosition))
+        {
+            CloseMenu();
+        }
     }
 
     private void OnEnable()
@@ -39,9 +59,7 @@ public class PlayerInventory_UI : MonoBehaviour
             _slotPositions.Add(child.GetComponent<RectTransform>());
         }
 
-        itemViewer.alpha = 0;
-        itemViewer.interactable = false;
-        itemViewer.blocksRaycasts = false;
+        TurnOffCanvasGroup(itemViewer);
     }
 
     private void OnAddItem(bool hasAddedItem)
@@ -68,7 +86,6 @@ public class PlayerInventory_UI : MonoBehaviour
             if (_slotPositions[ii].childCount > 0 && !hasGotItem)
             {
                 _slotPositions[ii].GetComponent<Image>().enabled = true;
-                Destroy(_slotPositions[ii].GetChild(0));
             }
             else if(_slotPositions[ii].childCount == 0 && hasGotItem)
             {
@@ -79,19 +96,43 @@ public class PlayerInventory_UI : MonoBehaviour
         }
     }
 
+    public void OpenMenu()
+    {
+        TurnOnCanvasGroup(_inventoryCanvasGroup);
+        _canClose = true;
+    }
+
+    public void CloseMenu()
+    {
+        TurnOffCanvasGroup(_inventoryCanvasGroup);
+        _canClose = false;
+    }
+
     public void OpenItemViewer(Item_SO item)
     {
-        itemViewer.alpha = 1;
-        itemViewer.interactable = true;
-        itemViewer.blocksRaycasts = true;
+        TurnOnCanvasGroup(itemViewer);
         ItemViewer.current.ShowItem(item);
+        _canClose = false;
     }
 
     public void CloseItemViewer()
     {
-        itemViewer.alpha = 0;
-        itemViewer.interactable = false;
-        itemViewer.blocksRaycasts = false;
+        TurnOffCanvasGroup(itemViewer);
         ItemViewer.current.HideItem();
+        _canClose = true;
+    }
+
+    private void TurnOnCanvasGroup(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+
+    private void TurnOffCanvasGroup(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 }
