@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement Player;
 
     public LayerMask tapMask;
+    public LayerMask ignoreMask;
 
     private NavMeshAgent agent;
     private Animator anim;
@@ -35,10 +36,10 @@ public class PlayerMovement : MonoBehaviour
         if (touch.fingerId != 0) return;
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (EventSystem.current.currentSelectedGameObject != null) return;
-        
+
         // If a raycast from the player's touch position hits something in the tapMask layer 
         // That is not an interactable object, set the agent's destination to the hit point
-        if (InputManager.I.CastFromCamera(touch.position, out RaycastHit hit, tapMask) && !hit.transform.TryGetComponent (out IInteractable interactable))
+        if (InputManager.I.CastFromCamera(touch.position, out RaycastHit hit, tapMask & ~ignoreMask))// && !hit.transform.TryGetComponent(out IInteractable interactable))
             agent.SetDestination(hit.point);
     }
 
