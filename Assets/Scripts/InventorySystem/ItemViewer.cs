@@ -44,9 +44,22 @@ public class ItemViewer : MonoBehaviour, IDragHandler
     {
         if(_spawnedObject != null) Destroy(_spawnedObject);
         
+        spawnPosition.rotation = Quaternion.identity;
+
         camera.enabled = true;
         _spawnedObject = Instantiate(item.itemModel, spawnPosition);
         _spawnedObject.layer = LayerMask.NameToLayer("Inspection");
+
+        // Set the item to a distance that will always make sure it is the right scale
+        MeshRenderer meshRenderer = _spawnedObject.GetComponent<MeshRenderer>();
+        float size = Mathf.Abs(Vector3.Distance(meshRenderer.bounds.max, meshRenderer.bounds.min));
+        float distance = (size * 2f) / (Mathf.Sin(camera.fieldOfView));
+        spawnPosition.transform.position = camera.transform.position - camera.transform.forward * distance;
+
+        // Center the object based on the mesh bounds. Allows for better rotation of the object (doesn't work on all for some reason, such as the styrofoam cup)
+        _spawnedObject.transform.position -= meshRenderer.bounds.center - _spawnedObject.transform.position;
+
+
         foreach (Material material in _spawnedObject.GetComponent<MeshRenderer>().materials)
         {
             material.shader = standardMat;
@@ -80,7 +93,7 @@ public class ItemViewer : MonoBehaviour, IDragHandler
     public void OnDrag(PointerEventData eventData)
     {
         if (_isZooming) return;
-        _spawnedObject.transform.Rotate(transform.up, -Vector3.Dot(eventData.delta, camera.transform.right) *  0.5f, Space.World);
-        _spawnedObject.transform.Rotate(camera.transform.right, Vector3.Dot(eventData.delta, camera.transform.up) * 0.5f, Space.World);
+        spawnPosition.transform.Rotate(transform.up, -Vector3.Dot(eventData.delta, camera.transform.right) *  0.5f, Space.World);
+        spawnPosition.transform.Rotate(camera.transform.right, Vector3.Dot(eventData.delta, camera.transform.up) * 0.5f, Space.World);
     }
 }
